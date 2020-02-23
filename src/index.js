@@ -66,37 +66,37 @@ const getCustomers = (purchases) => {
 };
 
 class App extends React.Component {
-  render() {
-    return (
-      <div className="app">
-          <h1>Purchase Rewards</h1>
-          <h2>Customers&rsquo; Purchases by Month</h2>
-          { getCustomers(this.props.purchases) }
-          <h2>All Purchases</h2>
-          <table>
-              <tr>
-                  <th>Customer</th>
-                  <th>Date</th>
-                  <th>Purchase</th>
-                  <th>Points</th>
-              </tr>
-          {this.props.purchases.map((aPurchase, index) => {
-              return (
-                  <tr key={index}>
-                      <td>{ customerNames[aPurchase.customerId] }</td>
-                      <td>{ aPurchase.date }</td>
-                      <td>{ aPurchase.purchase }</td>
-                      <td>{ getPoints(aPurchase.purchase) }</td>
-                  </tr>
-              );
-          })}
-          </table>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="app">
+                <h1>Purchase Rewards</h1>
+                <h2>Customers&rsquo; Purchases by Month</h2>
+                { getCustomers(this.props.purchases) }
+                <h2>All Purchases</h2>
+                <table>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Purchase</th>
+                        <th>Points</th>
+                    </tr>
+                    {this.props.purchases.map((aPurchase, index) => {
+                        return (
+                            <tr key={index}>
+                                <td>{ customerNames[aPurchase.customerId] }</td>
+                                <td>{ aPurchase.date }</td>
+                                <td>{ aPurchase.purchase }</td>
+                                <td>{ getPoints(aPurchase.purchase) }</td>
+                            </tr>
+                        );
+                    })}
+                </table>
+            </div>
+        );
+    }
 }
 
 ReactDOM.render(
-  <App purchases={purchases} />,
-  document.getElementById('root')
+    <App purchases={purchases} />,
+    document.getElementById('root')
 );

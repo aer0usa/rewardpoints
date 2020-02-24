@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { getPoints, getCustomers } from './customers'
-import { allPurchases } from './allPurchases'
+import { AllPurchases } from './allPurchases'
 import { purchases, customerNames, monthNames } from './purchases'
 
 class App extends React.Component {
@@ -13,7 +13,7 @@ class App extends React.Component {
                 <h2>Customers&rsquo; Purchases by Month</h2>
                 { getCustomers(this.props.purchases, this.props.customerNames, this.props.getPoints) }
                 <h2>All Purchases</h2>
-                { allPurchases(this.props.purchases, this.props.customerNames, this.props.getPoints) }
+                <AllPurchases purchases={this.props.purchases} customerNames={this.props.customerNames} getPoints={this.props.getPoints} />
             </div>
         );
     }

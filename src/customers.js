@@ -12,7 +12,7 @@ const getPoints = (purchase) => {
     return points;
 };
 
-const getCustomers = (purchases, monthNames, customerNames) => {
+const getCustomers = (purchases, customerNames, monthNames, getPoints) => {
     let customerRecords = {};
     let customers = [];
     purchases.forEach((aPurchase) => {

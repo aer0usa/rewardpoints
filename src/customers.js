@@ -12,7 +12,12 @@ const getPoints = (purchase) => {
     return points;
 };
 
-const getCustomers = (purchases, customerNames, monthNames, getPoints) => {
+const GetCustomers = ({
+    purchases,
+    customerNames,
+    monthNames,
+    getPoints
+}) => {
     let customerRecords = {};
     let customers = [];
     purchases.forEach((aPurchase) => {
@@ -45,7 +50,7 @@ const getCustomers = (purchases, customerNames, monthNames, getPoints) => {
                         <h3>Customer: { customerNames[customerData] }</h3>
                         { monthIndices.map((aMonth) => {
                             return (
-                                <p>
+                                <p key={`${aMonth}${customerData}`}>
                                     Purchases for { monthNames[aMonth] }:
                                     ${ customerRecords[customerData].months[aMonth].monthlyPurchase }
                                     = { customerRecords[customerData].months[aMonth].monthlyPoints } Points
@@ -62,4 +67,4 @@ const getCustomers = (purchases, customerNames, monthNames, getPoints) => {
     );
 };
 
-export {getCustomers, getPoints};
+export {GetCustomers, getPoints};

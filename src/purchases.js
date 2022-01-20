@@ -86,6 +86,16 @@ const purchases = [
     },
     {
         'customerId': 4,
+        'date': 'November 1, 2019',
+        'purchase': 154
+    },
+    {
+        'customerId': 4,
+        'date': 'December 1, 2019',
+        'purchase': 300
+    },
+    {
+        'customerId': 4,
         'date': 'August 7, 2019',
         'purchase': 75
     }

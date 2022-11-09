@@ -1,6 +1,8 @@
 # rewardpoints
 Show monthly purchases and points earned.
 
+This project is a code sample I made for a job application.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
